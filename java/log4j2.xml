@@ -4,7 +4,7 @@
         <Console name="ConsoleAppender" target="SYSTEM_OUT">
             <PatternLayout>
                 <Pattern>
-                    %style{%d{MM.dd HH:mm:ss}}{gray} %msg%n
+                    %style{%d{MM.dd HH:mm:ss}}{ANSI_BRIGHT_BLACK} %msg%n
                 </Pattern>
             </PatternLayout>
         </Console>
