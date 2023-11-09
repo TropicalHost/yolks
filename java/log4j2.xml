@@ -4,7 +4,7 @@
         <Console name="ConsoleAppender" target="SYSTEM_OUT">
             <PatternLayout>
                 <Pattern>
-                    %highlight{%d{MM.dd HH:mm:ss} %msg%n}{FATAL=red blink, ERROR=red bold, WARN=yellow bold, INFO=green, DEBUG=cyan, TRACE=blue}
+                    %style{%d{MM.dd HH:mm:ss}}{gray} %msg%n
                 </Pattern>
             </PatternLayout>
         </Console>
