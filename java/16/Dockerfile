@@ -36,5 +36,7 @@ USER        container
 ENV         USER=container HOME=/home/container
 WORKDIR     /home/container
 
+COPY        /../log4j2.xml /etc/log4j2.xml
+
 COPY        ./../entrypoint.sh /entrypoint.sh
 CMD         [ "/bin/bash", "/entrypoint.sh" ]
