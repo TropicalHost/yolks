@@ -24,7 +24,7 @@ FROM        --platform=$TARGETOS/$TARGETARCH ibm-semeru-runtimes:open-19-jdk
 
 LABEL       author="Matthew Penner" maintainer="matthew@pterodactyl.io"
 
-LABEL       org.opencontainers.image.source="https://github.com/pterodactyl/yolks"
+LABEL       org.opencontainers.image.source="https://github.com/tropicalhost/yolks"
 LABEL       org.opencontainers.image.licenses=MIT
 
 RUN 				apt-get update -y \
@@ -34,6 +34,8 @@ RUN 				apt-get update -y \
 USER        container
 ENV         USER=container HOME=/home/container
 WORKDIR     /home/container
+
+COPY        /../log4j2.xml /etc/log4j2.xml
 
 COPY        ./../entrypoint.sh /entrypoint.sh
 CMD         [ "/bin/bash", "/entrypoint.sh" ]
